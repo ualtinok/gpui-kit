@@ -26,7 +26,6 @@ use crate::{
     styled::toast_shadow,
     v_flex,
 };
-use rust_i18n::t;
 
 const NOTIFICATION_TRANSITION_DURATION: Duration = Duration::from_millis(400);
 const NOTIFICATION_EXIT_DURATION: Duration = Duration::from_millis(200);
@@ -463,7 +462,7 @@ impl Render for Notification {
                     .child(
                         Button::new("close")
                             .icon(IconName::Close)
-                            .accessibility_label(t!("Notification.close"))
+                            .accessibility_label("Close")
                             .ghost()
                             .xsmall()
                             .on_click(cx.listener(|this, _, window, cx| {
